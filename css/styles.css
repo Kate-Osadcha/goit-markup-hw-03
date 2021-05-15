@@ -286,6 +286,7 @@ body {
 
 .footer-contact {
   margin-top: 20px;
+  margin-bottom: 60px;
 }
 
 .contact-list-item:not(:last-child) {
