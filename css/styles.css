@@ -69,16 +69,18 @@ body {
 
 /*===================HEADER===================*/
 
+.header {
+  border-bottom: 1px solid #ececec;
+}
 .header-container {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #ececec;
 }
 
 .nav-header {
   display: flex;
-  align-items: baseline;
+  align-items: center;
 }
 
 .link-logo {
@@ -96,6 +98,8 @@ body {
 }
 .menu {
   display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .menu-item:not(:last-child) {
@@ -117,6 +121,7 @@ body {
 
 .list-contact {
   display: flex;
+  align-items: center;
 }
 
 .list-contact-item:not(:last-child) {
@@ -220,6 +225,9 @@ body {
 
 /*=================DOING=================*/
 
+.section-doing {
+  padding-top: 0px;
+}
 .doing-list {
   display: flex;
   justify-content: center;
@@ -242,12 +250,6 @@ body {
 .team-list-item {
   flex-basis: calc(100% / 4 - var(--gap-card-set));
   margin-right: var(--gap-card-set);
-}
-
-.team-list-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -266,6 +268,7 @@ body {
   letter-spacing: 0.03em;
   color: var(--main-black-color);
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .position {
@@ -274,15 +277,19 @@ body {
   line-height: 1.18;
   letter-spacing: 0.03em;
   color: var(--main-grey-color);
+  text-align: center;
 }
 /*=================END TEAM=================*/
 
 /*=================FOOTER=================*/
 
-.footer-container {
-  display: block;
+.footer-section {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.footer-container {
+  display: block;
 }
 
 .link-logo-footer {
@@ -353,14 +360,14 @@ body {
 .list-portfolio {
   display: flex;
   flex-wrap: wrap;
-  margin-right: calc(- 1 * var(--gap-card-set));
-  margin-bottom: calc(- 1 * var(--gap-card-set));
+  margin-right: -30px;
+  margin-bottom: -30px;
 }
 
 .list-portfolio-item {
-  flex-basis: calc(100% / 3 - var(--gap-card-set));
-  margin-right: var(--gap-card-set);
-  margin-bottom: var(--gap-card-set);
+  flex-basis: calc((100% - 90px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
   background: #ffffff;
   border: 1px solid #eeeeee;
   box-sizing: border-box;
