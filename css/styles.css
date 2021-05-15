@@ -4,6 +4,7 @@
   --accent-color: #2196f3;
   --main-grey-color: #757575;
   --main-black-color: #212121;
+  --gap-card-set: 30px;
 }
 
 h1,
@@ -26,6 +27,8 @@ ol {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .list {
@@ -65,13 +68,12 @@ body {
 /* =============END COMPONENTS ============= */
 
 /*===================HEADER===================*/
-.header {
-  border: 1px solid #ececec;
-}
+
 .header-container {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+  border-bottom: 1px solid #ececec;
 }
 
 .nav-header {
@@ -163,6 +165,7 @@ body {
   background-color: #2196f3;
   color: #ffffff;
   cursor: pointer;
+  border: #2196f3;
 }
 
 .modal-btn:hover,
@@ -174,6 +177,18 @@ body {
 
 /*=================ADVANTAGE=================*/
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 .advantage-list {
   display: flex;
 }
@@ -208,10 +223,11 @@ body {
 .doing-list {
   display: flex;
   justify-content: center;
+  margin-right: calc(- 1 * var(--gap-card-set));
 }
 
-.doing-list-item:not(:last-child) {
-  margin-right: 30px;
+.doing-list-item {
+  margin-right: var(--gap-card-set);
 }
 
 /*=================END DOING=================*/
@@ -220,20 +236,27 @@ body {
 
 .team-list {
   display: flex;
+  margin-right: calc(- 1 * var(--gap-card-set));
 }
 
-.team-list-item:not(:last-child) {
-  margin-right: 30px;
+.team-list-item {
+  flex-basis: calc(100% / 4 - var(--gap-card-set));
+  margin-right: var(--gap-card-set);
 }
 
 .team-list-item {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
-.team-list-image {
-  margin-bottom: 30px;
+.team-list-content {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .team-title {
@@ -258,16 +281,17 @@ body {
 
 .footer-container {
   display: block;
+  padding-top: 60px;
 }
-
 
 .footer-contact {
   margin-top: 20px;
 }
 
 .contact-list-item:not(:last-child) {
-margin-bottom: 9px;
+  margin-bottom: 9px;
 }
+
 .contact-list-link {
   font-style: normal;
   font-weight: 400;
@@ -279,7 +303,19 @@ margin-bottom: 9px;
 /*=================END FOOTER=================*/
 
 /*=================PORTFOLIO=================*/
+
+.list-filter {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.list-filter-item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .filter-button {
+  padding: 6px 22px;
   font-family: var(--main-font);
   font-weight: 500;
   font-size: 16px;
@@ -288,6 +324,9 @@ margin-bottom: 9px;
   letter-spacing: 0.03em;
   color: var(--main-black-color);
   cursor: pointer;
+  background: #f5f4fa;
+  border-radius: 4px;
+  border: #757575;
 }
 
 .filter-button:hover,
@@ -296,12 +335,37 @@ margin-bottom: 9px;
   color: #ffffff;
 }
 
+.filter-button:active {
+  background-color: var(--accent-color);
+  color: #ffffff;
+}
+
+.list-portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: calc(- 1 * var(--gap-card-set));
+  margin-bottom: calc(- 1 * var(--gap-card-set));
+}
+
+.list-portfolio-item {
+  flex-basis: calc(100% / 3 - var(--gap-card-set));
+  margin-right: var(--gap-card-set);
+  margin-bottom: var(--gap-card-set);
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+}
 .list-portfolio-title {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--main-black-color);
+  margin-bottom: 4px;
+}
+
+.list-portfolio-content {
+  padding: 20px 24px;
 }
 
 .description-portfolio {
